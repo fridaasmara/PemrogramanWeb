@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@100;300;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .938rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 100;
+}
+
+nav {
+    height: 3.5rem;
+}
+
+.logo,
+.burger,
+.close {
+    color: white;
+}
+
+.nav-data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: 600;
+}
+
+.logo i {
+    font-weight: initial;
+    font-size: 1.25rem;
+}
+
+.nav-toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.burger,
+.close {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: opacity .1s, transform .4s;
+}
+
+.close {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1118px){
+    .menu{
+        position: absolute;
+        left: 0;
+        top: 2.5rem;
+        width: 100%;
+        height: calc(100vh - 3.5rem);
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .list {
+        background-color: black;
+        padding-top: 1rem;
+    }
+
+}
+
+.nav-link {
+    color: white;
+    background-color: black;
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link:hover {
+     background-color: grey;
+}
+
+.show-menu {
+    opacity: 1;
+    top: 3.5rem;
+    pointer-events: initial;
+}
+
+.show-icon .burger{
+    opacity: 0;
+    transform: rotate(90deg)
+}
+
+.show-icon .close{
+    opacity: 1;
+    transform: rotate(90deg)
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dd-link {
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    color: white;
+    background-color: black;
+    display:flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.dd-link i {
+    font-size: 1rem;
+}
+
+.dd-link:hover {
+    background-color: grey;
+}
+
+.dd-menu {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.dropdown:hover .dd-menu {
+    max-height: 1000px;
+}
+
+.dropdown:hover .dd-arrow{
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem;
+    }
+
+    .nav_link{
+        padding-inline: 1rem;
+    }
+}
+
+@media screen and (min-width: 1118px){
+    .container{
+        margin-inline: auto;
+    }
+
+    .nav {
+        height: 5.5rem ;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .list {
+        height: 100%;
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    .nav-link {
+        height: 100%;
+        padding: 0;
+        justify-content: initial;
+        column-gap: .25rem;
+    }
+
+    .nav-link:hover {
+        background-color: transparent;
+    }
+
+    .dropdown{
+        position: relative;
+    }
+
+    .dd-menu{
+        max-height: initial;
+        overflow: initial;
+        position: absolute;
+        left: 0;
+        top: 6rem;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .dd-link {
+        padding-inline: 2rem 5rem;
+    }
+
+    .dropdown:hover .dd-menu{
+        opacity: 1;
+        top: 5.5rem;
+        pointer-events: initial;
+    }
+}
+
+.main {
+    padding-top: 5.5rem;
+    height: 100vh;
+    background-color: white;
+}
+
+.main h1{
+    margin-top: 50px;
+    text-align: center;
+}
