@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+    <div class="container">
+        <div id="kotak" class="kotak">
+            <h3>Kartu Nama</h3>
+            <button id="clear" onclick="clearContent('kotak')">clear</button>
+        </div>
+
+        <div id="kotak1" class="kotak">
+            <h3>Kartu Nama</h3>
+            <button id="clear" onclick="clearContent('kotak1')">clear</button>
+        </div>
+
+        <div id="kotak2" class="kotak">
+            <h3>Kartu Nama</h3>
+            <button id="clear" onclick="clearContent('kotak2')">clear</button>
+        </div>
+
+        <div id="kotak3" class="kotak">
+            <h3>Kartu Nama</h3>
+            <button id="clear" onclick="clearContent('kotak3')">clear</button>
+        </div>
+    </div>
+
+    <script>
+        function clearContent(kotak){
+            document.getElementById(kotak).style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>
+        <button id="genNew">click</button>
+        <span id="color"></span>
+      </h1>
+
+    <script>
+        const setBg = () => {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+        }
+
+        genNew.addEventListener("click", setBg);
+        setBg();
+    </script>
+</body>
+</html>
+

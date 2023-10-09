@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(255, 197, 197);
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    margin-left: 10%;
+    margin-top: 5%;
+
+}
+
+button {
+    float: right;
+
+}
+
+.kotak {
+    border: 1px solid red;
+    background-color: aqua;
+    color: black;
+    margin: 50px;
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h3 {
+    text-align: center;
+}
+
+.click {
+    padding: 50px;
+}
